@@ -12,6 +12,7 @@ function NewInventoryForm(props){
       description: event.target.description.value.charAt(0).toUpperCase() + event.target.description.value.slice(1), 
       wholesaleCost: parseFloat(event.target.wholesaleCost.value),
       scoopPrice: ((event.target.wholesaleCost.value/130)*2).toFixed(2),
+      scoopsRemaining: parseInt(130),
       id: v4()
     });
   }
@@ -29,3 +30,4 @@ NewInventoryForm.propTypes = {
 };
 
 export default NewInventoryForm;
+

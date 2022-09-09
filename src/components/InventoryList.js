@@ -14,6 +14,7 @@ function InventoryList(props) {
           description={inventory.description}
           wholesaleCost={inventory.wholesaleCost}
           scoopPrice={inventory.scoopPrice}
+          scoopsRemaining={inventory.scoopsRemaining}
           id={inventory.id}
           key={inventory.id} />
       )}
