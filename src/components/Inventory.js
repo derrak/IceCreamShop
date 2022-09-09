@@ -16,7 +16,7 @@ function Inventory(props) {
 }
 
 Inventory.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   brand: PropTypes.string,
   description: PropTypes.string,
   wholesaleCost: PropTypes.number,
