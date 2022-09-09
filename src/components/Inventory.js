@@ -8,7 +8,6 @@ function Inventory(props) {
         <h3>{props.name} | {props.brand}</h3>
         <p>{props.description}</p>
         <br />
-        <p>wholesale Cost (per tub): <sup>$</sup>{props.wholesaleCost}</p>
         <p>Price per scoop: <sup>$</sup>{props.scoopPrice}</p>
         <hr />
       </div>
@@ -21,9 +20,9 @@ Inventory.propTypes = {
   brand: PropTypes.string,
   description: PropTypes.string,
   wholesaleCost: PropTypes.number,
-  wholesaleCost: PropTypes.number,
+  scoopPrice: PropTypes.string,
   id: PropTypes.string,
-  scoopPrice: PropTypes.func
+  whenInventoryClicked: PropTypes.func
 };
 
 export default Inventory;
