@@ -8,10 +8,9 @@ function InventoryDetail(props) {
     <React.Fragment>
       <h1>Inventory Detail</h1>
       <h3>{inventory.name} | {inventory.brand}</h3>
-      <p>{props.description}</p>
-      <br />
-      <p>wholesale Cost (per tub): <sup>$</sup>{props.wholesaleCost}</p>
-      <p>Price per scoop: <sup>$</sup>{props.scoopPrice}</p>
+      <i>{inventory.description}</i>
+      <p>Wholesale Cost (per tub): <sup>$</sup>{inventory.wholesaleCost.toFixed(2)}</p>
+      <p>Price per scoop: <sup>$</sup>{inventory.scoopPrice}</p>
       <button onClick={props.onClickingEdit}>Update Item</button>
       <button onClick={() => onClickingDelete(inventory.id)}>Delete Item</button>
       <hr />
@@ -21,7 +20,7 @@ function InventoryDetail(props) {
 
 InventoryDetail.propTypes = {
   inventory: PropTypes.object,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   brand: PropTypes.string,
   description: PropTypes.string,
   wholesaleCost: PropTypes.number,
