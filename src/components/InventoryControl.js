@@ -55,6 +55,18 @@ class InventoryControl extends React.Component {
     });
   }
 
+  handleSellingItem= () => {
+    const inventoryToDecrement = this.state.selectedInventory;
+    if (inventoryToDecrement.scoopsRemaining !== 0){
+      const quantityToDecrement = {
+        scoopsRemaining : inventoryToDecrement.scoopsRemaining -= 1
+      }
+      this.handleChangingSelectedInventory(quantityToDecrement.id) 
+    } else {
+      this.handleChangingSelectedInventory(this.state.selectedInventory.id)
+  }
+  }
+
   handleDeletingInventory = (id) => {
     const newMainInventoryList = this.state.mainInventoryList.filter(inventory => inventory.id !== id);
     this.setState({
@@ -79,6 +91,7 @@ class InventoryControl extends React.Component {
       currentlyVisibleState =
         <InventoryDetail
           inventory={this.state.selectedInventory}
+          onSellingItem={this.handleSellingItem}
           onClickingDelete={this.handleDeletingInventory}
           onClickingEdit={this.handleEditClick} />
       buttonText = "Return to Inventory List";

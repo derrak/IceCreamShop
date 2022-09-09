@@ -16,7 +16,10 @@ function InventoryList(props) {
           scoopPrice={inventory.scoopPrice}
           scoopsRemaining={inventory.scoopsRemaining}
           id={inventory.id}
-          key={inventory.id} />
+          key={inventory.id} 
+          />
+ 
+          
       )}
     </React.Fragment>
   );
@@ -24,7 +27,8 @@ function InventoryList(props) {
 
 InventoryList.propTypes = {
   inventoryList: PropTypes.array,
-  onInventorySelection: PropTypes.func
+  onInventorySelection: PropTypes.func,
+  onClickingDelete: PropTypes.func,
 };
 
 export default InventoryList;

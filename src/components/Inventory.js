@@ -9,6 +9,7 @@ function Inventory(props) {
         <p>{props.description}</p>
         <p>Price per scoop: <sup>$</sup>{props.scoopPrice}</p>
         <p>Scoops remaining: {props.scoopsRemaining}</p>
+        {/* <button onClick={() => onClickingDelete(props.id)}>Delete Item</button> */}
         <hr />
       </div>
     </React.Fragment>
@@ -23,6 +24,7 @@ Inventory.propTypes = {
   scoopPrice: PropTypes.string,
   scoopsRemaining: PropTypes.number,
   id: PropTypes.string,
+  onClickingDelete: PropTypes.func,
   whenInventoryClicked: PropTypes.func
 };
 
