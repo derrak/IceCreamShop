@@ -12,6 +12,9 @@ function EditInventoryForm(props) {
 
   return (
     <React.Fragment>
+        <h3>{inventory.name} | {inventory.brand}</h3>
+        <h4><i>{inventory.description}</i></h4>
+        <h4>Wholesale cost: <sup>$</sup>{inventory.wholesaleCost}</h4>
       <ReusableForm
         formSubmissionHandler={handleEditInventoryFormSubmission} 
         buttonText="Update Inventory" />
@@ -24,4 +27,4 @@ EditInventoryForm.propTypes = {
   onEditInventory: PropTypes.func
 };
 
-export default EditInventoryForm;
+export default EditInventoryForm;   
